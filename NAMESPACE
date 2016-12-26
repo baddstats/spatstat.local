@@ -1,0 +1,7 @@
+import(spatstat,tensor,stats,graphics)
+# Export all names unless they start with a dot
+exportPattern("^[^.]")
+# Note that package.skeleton gave
+# exportPattern("^[[:alpha:]]+")
+# which excluded [.ssf
+
