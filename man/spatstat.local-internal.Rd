@@ -1,5 +1,5 @@
-\name{spatstatLocal-internal}
-\title{Internal functions of the spatstatLocal package}
+\name{spatstat.local-internal}
+\title{Internal Functions of the spatstat.local Package}
 \alias{print.loccit}
 \alias{locppmEngine}
 \alias{locppmFFT}
@@ -51,7 +51,7 @@
 \alias{print.homtestmap}
 \alias{splat}
 \description{
-  Internal functions of the \pkg{spatstatLocal} package.
+  Internal functions of the \pkg{spatstat.local} package.
 }
 \usage{
  sqmag(x)

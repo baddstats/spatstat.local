@@ -1,6 +1,6 @@
-\name{spatstatLocal-package}
-\alias{spatstatLocal-package}
-\alias{spatstatLocal}
+\name{spatstat.local-package}
+\alias{spatstat.local-package}
+\alias{spatstat.local}
 \docType{package}
 \title{
   Local Composite Likelihood

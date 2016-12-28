@@ -1,1 +1,1 @@
-# spatstatLocal
+# spatstat.local
