@@ -9,7 +9,7 @@
 .onAttach <- function(libname, pkgname) {
   v <- read.dcf(file=system.file("DESCRIPTION", package=pkgname),
                 fields="Version")
-  msg <- paste("local", v)
+  msg <- paste("spatstat.local", v)
   packageStartupMessage(msg)
   invisible(NULL)
 }
