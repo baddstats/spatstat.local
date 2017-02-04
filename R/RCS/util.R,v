@@ -1,10 +1,15 @@
-head	1.16;
+head	1.17;
 access;
 symbols;
 locks
-	adrian:1.16; strict;
+	adrian:1.17; strict;
 comment	@# @;
 
+
+1.17
+date	2017.02.04.05.59.09;	author adrian;	state Exp;
+branches;
+next	1.16;
 
 1.16
 date	2016.09.10.05.00.26;	author adrian;	state Exp;
@@ -91,16 +96,51 @@ desc
 @@
 
 
-1.16
+1.17
 log
-@gridproxy now aggregates weights, if given
+@added complete copy of 'splat' to avoid warnings from package checker
 @
 text
 @#
 # util.R
 #
-#  $Revision: 1.15 $ $Date: 2016/09/10 04:46:45 $
+#  $Revision: 1.16 $ $Date: 2016/09/10 05:00:26 $
 #
+
+# temporary copy of spatstat:::splat (unexported)
+
+splat <- function(..., indent=0) {
+  st <- pasteN(...) # removes NULL arguments without making a space
+  ## split at newline characters, if present
+  ss <- unlist(strsplit(st, "\n"))
+  ## 
+  if(is.numeric(indent)) {
+    nindent <- indent
+    indent <- paste(rep(" ", nindent), collapse="")
+  } else if(is.character(indent)) {
+    nindent <- nchar(indent)
+  } else stop("indent should be character or numeric")
+  w <- getOption('width')
+  if(nindent >= w) {
+    warning("indentation is more than the permissible text width: ignored")
+    nindent <- 0
+  }
+  ##
+  if(nindent == 0) {
+    for(ssi in ss) 
+      cat(unlist(strsplit(ssi, " ")), fill=TRUE)
+  } else {
+    wfill <- w - nindent
+    for(ssi in ss) {
+      vi <- choptextline(ssi, w=w, indent=indent)
+      for(vij in vi) {
+        cat(indent)
+        cat(vij, fill=wfill)
+      }
+    }
+  }
+  return(invisible(NULL))
+}
 
 gridproxy <- function(P, ..., dimyx=NULL, eps=NULL, xy=NULL, weights=NULL) {
   stopifnot(is.ppp(P))
@@ -174,6 +214,18 @@ applymaps <- local({
 
   applymaps
 })
+@
+
+
+1.16
+log
+@gridproxy now aggregates weights, if given
+@
+text
+@d4 1
+a4 1
+#  $Revision: 1.15 $ $Date: 2016/09/10 04:46:45 $
+d6 35
 @
 
 

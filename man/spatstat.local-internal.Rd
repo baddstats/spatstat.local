@@ -111,7 +111,7 @@
  printStatusList(stats)
  HomTestMapEngine(x, info)
  \method{print}{homtestmap}(x, \dots)
- splat(\dots)
+ splat(\dots, indent)
 }
 \details{
   These internal functions should not be called directly by the user.

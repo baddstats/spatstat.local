@@ -2,9 +2,6 @@
 *~
 .auto
 
-# RCS
-*,v
-
 # History files
 .Rhistory
 
