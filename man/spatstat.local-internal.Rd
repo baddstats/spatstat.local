@@ -49,7 +49,6 @@
 \alias{printStatusList}
 \alias{HomTestMapEngine}
 \alias{print.homtestmap}
-\alias{splat}
 \description{
   Internal functions of the \pkg{spatstat.local} package.
 }
@@ -111,7 +110,6 @@
  printStatusList(stats)
  HomTestMapEngine(x, info)
  \method{print}{homtestmap}(x, \dots)
- splat(\dots, indent)
 }
 \details{
   These internal functions should not be called directly by the user.

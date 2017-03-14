@@ -4,41 +4,6 @@
 #  $Revision: 1.17 $ $Date: 2017/02/04 05:59:09 $
 #
 
-# temporary copy of spatstat:::splat (unexported)
-
-splat <- function(..., indent=0) {
-  st <- pasteN(...) # removes NULL arguments without making a space
-  ## split at newline characters, if present
-  ss <- unlist(strsplit(st, "\n"))
-  ## 
-  if(is.numeric(indent)) {
-    nindent <- indent
-    indent <- paste(rep(" ", nindent), collapse="")
-  } else if(is.character(indent)) {
-    nindent <- nchar(indent)
-  } else stop("indent should be character or numeric")
-  w <- getOption('width')
-  if(nindent >= w) {
-    warning("indentation is more than the permissible text width: ignored")
-    nindent <- 0
-  }
-  ##
-  if(nindent == 0) {
-    for(ssi in ss) 
-      cat(unlist(strsplit(ssi, " ")), fill=TRUE)
-  } else {
-    wfill <- w - nindent
-    for(ssi in ss) {
-      vi <- choptextline(ssi, w=w, indent=indent)
-      for(vij in vi) {
-        cat(indent)
-        cat(vij, fill=wfill)
-      }
-    }
-  }
-  return(invisible(NULL))
-}
-
 gridproxy <- function(P, ..., dimyx=NULL, eps=NULL, xy=NULL, weights=NULL) {
   stopifnot(is.ppp(P))
   W <- as.owin(P)
