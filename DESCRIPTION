@@ -1,10 +1,10 @@
 Package: spatstat.local
 Type: Package
 Title: Local Composite Likelihood
-Version: 3.5-2
-Date: 2017-02-04
-Depends: R (>= 3.3.0), spatstat (>= 1.48-0), stats, graphics
-Imports: tensor
+Version: 3.5-3
+Date: 2017-03-14
+Depends: R (>= 3.3.0), spatstat (>= 1.49-0), stats, graphics
+Imports: tensor, spatstat.utils
 Author: Adrian Baddeley
 Maintainer: Adrian Baddeley <adrian.baddeley@curtin.edu.au>
 Description: Extension to spatstat for local composite likelihood.
