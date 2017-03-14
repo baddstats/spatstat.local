@@ -39,6 +39,13 @@
 \seealso{
   \code{\link{loccit}}, \code{\link{predict.locppm}}.
 }
+\references{
+  \localpaper
+
+  Baddeley, A., Rubak, E. and Turner, R. (2015)
+  \emph{Spatial Point Patterns: Methodology and Applications with R}.
+  Chapman and Hall/CRC Press.
+}
 \examples{
   fit <- loccit(redwood, ~1, "Thomas", sigma=0.15, nd=10, verbose=FALSE)
   lam <- predict(fit)

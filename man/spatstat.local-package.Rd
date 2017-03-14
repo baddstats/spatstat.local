@@ -6,7 +6,7 @@
   Local Composite Likelihood
 }
 \description{
-  Experimental code for fitting
+  Extension of the spatstat package, for fitting
   spatial point process models by
   local composite likelihood.
 }
@@ -25,9 +25,7 @@
   \adrian.
 }
 \references{
-  Baddeley, A. (2016)
-  Local composite likelihood for spatial point processes.
-  Submitted for publication.
+  \localpaper
 
   Baddeley, A., Rubak, E. and Turner, R. (2015)
   \emph{Spatial Point Patterns: Methodology and Applications with R}.

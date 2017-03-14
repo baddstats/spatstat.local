@@ -85,9 +85,7 @@ locmincon(\dots, sigma = NULL, f = 1/4, verbose = TRUE,
   Object of class \code{"locmincon"}.
 }
 \references{
-  Baddeley, A. (2016)
-  Local composite likelihood for spatial point processes.
-  Submitted for publication.
+  \localpaper
 
   Baddeley, A., Rubak, E. and Turner, R. (2015)
   \emph{Spatial Point Patterns: Methodology and Applications with R}.

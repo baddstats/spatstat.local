@@ -82,9 +82,7 @@
   on its homogeneous equivalent, by changing the argument \code{which}.
 }
 \references{
-  Baddeley, A. (2016)
-  Local composite likelihood for spatial point processes.
-  Submitted for publication.
+  \localpaper
 
   Baddeley, A., Rubak, E. and Turner, R. (2015)
   \emph{Spatial Point Patterns: Methodology and Applications with R}.
