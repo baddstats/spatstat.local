@@ -1,3 +1,4 @@
+README.md
 ^.*\.Rproj$
 ^\.Rproj\.user$
 ^\.travis\.yml$
@@ -5,3 +6,4 @@
 \.gcda$
 \.gcno$
 ^appveyor\.yml$
+.DS_Store
