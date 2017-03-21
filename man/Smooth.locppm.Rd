@@ -47,7 +47,7 @@
   \code{\link{Smooth.ppp}}
 }
 \examples{
-  fit <- locppm(cells, sigma=0.1)
+  fit <- locppm(cells, sigma=0.1, use.fft=TRUE)
   plot(Smooth(fit))
 }
 \keyword{spatial}
