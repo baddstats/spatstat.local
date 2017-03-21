@@ -78,7 +78,7 @@
 }
 \examples{
   fit <- locppm(cells, sigma=0.1, use.fft=TRUE)
-  plot(predict(fit))
+  lam <- predict(fit)
 }
 \keyword{spatial}
 \keyword{models}

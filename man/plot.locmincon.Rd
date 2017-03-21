@@ -93,7 +93,6 @@
    plot(fitm, how="smoothed")  
    fitc <- loccit(X, ~1, "Thomas", nd=5, control=list(maxit=20))
    plot(fitc, how="exact")  
-   plot(fitc, how="smoothed")  
 }
 \keyword{spatial}
 \keyword{models}
