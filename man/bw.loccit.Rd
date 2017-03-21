@@ -73,8 +73,9 @@ bw.loccit(..., use.fft=TRUE,
   \code{\link{loccit}}
 }
 \examples{
+  X <- redwood[owin(c(0,1), c(-1,-1/2))]
   Ns <- if(interactive()) 16 else 2
-  b <- bw.loccit(redwood, ~1, "Thomas", srange=c(0.07, 0.2), ns=Ns)
+  b <- bw.loccit(X, ~1, "Thomas", srange=c(0.07, 0.14), ns=Ns)
   b
   plot(b)
 }

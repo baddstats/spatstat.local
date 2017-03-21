@@ -112,14 +112,8 @@ loccit(X, trend = ~1,
   \code{\link{locppm}}
 }
 \examples{
-   \dontrun{
-   fit <- loccit(redwood, ~1, "Thomas")
-   fit <- loccit(redwood, ~1, "Thomas", nd=32, control=list(maxit=50))
-   }
-   \testonly{
    X <- redwood[owin(c(0,1), c(-1,-1/2))]
    fit <- loccit(X, ~1, "Thomas", nd=5, control=list(maxit=20))
-   }
    fit
 }
 \keyword{spatial}

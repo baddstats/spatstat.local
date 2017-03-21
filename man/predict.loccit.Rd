@@ -47,7 +47,8 @@
   Chapman and Hall/CRC Press.
 }
 \examples{
-  fit <- loccit(redwood, ~1, "Thomas", sigma=0.15, nd=10, verbose=FALSE)
+  X <- redwood[owin(c(0,1), c(-1,-1/2))]
+  fit <- loccit(X, ~1, "Thomas", nd=5, control=list(maxit=20))
   lam <- predict(fit)
 }
 \keyword{spatial}

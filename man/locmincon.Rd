@@ -98,13 +98,8 @@ locmincon(\dots, sigma = NULL, f = 1/4, verbose = TRUE,
   \code{\link{loccit}}
 }
 \examples{
-   \donttest{
-   fit <- locmincon(redwood, ~1, "Thomas", sigma=0.07)
-   }
-   \testonly{
    X <- redwood[owin(c(0,1), c(-1,-1/2))]
    fit <- locmincon(X, ~1, "Thomas", sigma=0.07)
-   }
    fit
 }
 \keyword{spatial}

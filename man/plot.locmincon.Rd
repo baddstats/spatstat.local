@@ -87,12 +87,13 @@
   \code{\link{methods.locmincon}}
 }
 \examples{
-   example(locmincon)
-   plot(fit, how="exact")  
-   plot(fit, how="smoothed")  
-   example(loccit)
-   plot(fit, how="exact")  
-   plot(fit, how="smoothed")  
+   X <- redwood[owin(c(0,1), c(-1,-1/2))]
+   fitm <- locmincon(X, ~1, "Thomas", sigma=0.07)
+   plot(fitm, how="exact")  
+   plot(fitm, how="smoothed")  
+   fitc <- loccit(X, ~1, "Thomas", nd=5, control=list(maxit=20))
+   plot(fitc, how="exact")  
+   plot(fitc, how="smoothed")  
 }
 \keyword{spatial}
 \keyword{models}
