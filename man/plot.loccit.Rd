@@ -54,7 +54,7 @@
   If \code{how="exact"} the exact computed values
   will be displayed as circles centred at the locations where they
   were computed. If \code{how="smoothed"} these
-  values will be kernel-smoothed using \code{\link{smooth.ppp}}
+  values will be kernel-smoothed using \code{\link[spatstat]{Smooth.ppp}}
   and displayed as a pixel image.  
 }
 \value{
