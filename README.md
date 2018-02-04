@@ -2,7 +2,7 @@
 
 This is an _extension_ of the `spatstat` package. 
 
-It fits point process models to point pattern data by local composite likelihood (aka geographically weighted regression) as described in the paper, A. Baddeley (2017) Local composite likelihood for spatial point processes, _Spatial Statistics_, **22** (2) 261--295.
+It fits point process models to point pattern data by local composite likelihood (aka geographically weighted regression) as described in the paper, A. Baddeley (2017) Local composite likelihood for spatial point processes, _Spatial Statistics_, **22** (2) 261-295.
 
 This GitHub repository holds the *development version* of
 `spatstat.local`. The development version is newer than the *official release*
