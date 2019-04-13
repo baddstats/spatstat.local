@@ -23,3 +23,6 @@ src/*.gcno
 
 # .o files
 src/*o
+
+# RCS files
+R/RCS/*.R,v
