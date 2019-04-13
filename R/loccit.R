@@ -5,7 +5,7 @@
 # and local Palm likelihood
 # for cluster/Cox processes.
 #
-#  $Revision: 2.15 $ $Date: 2016/10/19 08:37:16 $
+#  $Revision: 2.17 $ $Date: 2019/04/13 15:37:08 $
 #
 
 loccit <- local({
@@ -113,6 +113,7 @@ loccit <- local({
   if(verbose) cat("Fitting homogeneous cluster model ... ")
   homclusfit <- kppm(X,
                      trend=trend,
+                     clusters=clusters,
                      covariates=covariates,
                      covfunargs=covfunargs,
                      use.gam=use.gam,
@@ -493,20 +494,5 @@ accumulateStatusList <- function(x, stats=NULL, stoponerror=TRUE) {
     stats$frequencies <- c(stats$frequencies, 1)
   }
   return(stats)
-}
-
-printStatusList <- function(stats) {
-  with(stats,
-       {
-         for(i in seq_along(values)) {
-           printStatus(values[[i]])
-           ni <- frequencies[i]
-           cat(paste("\t",
-                     paren(paste(ni,
-                                 ngettext(ni, "occurrence", "occurrences"))),
-                     "\n"))
-         }
-       })
-  invisible(NULL)
 }
 

@@ -232,14 +232,14 @@
          )
        )
 
-extraClusterModelInfo <- function(name) {
+extraClusterModelInfo <- function(name, warn=FALSE) {
   if(!is.character(name) || length(name) != 1)
     stop("Argument must be a single character string", call.=FALSE)
   nama2 <- names(.Extra.ClusterModelInfoTable)
   if(!(name %in% nama2)) {
-    warning(paste(sQuote(name), "is not recognised;",
-               "valid names are", commasep(sQuote(nama2))),
-         call.=FALSE)
+    if(warn) warning(paste(sQuote(name), "is not recognised;",
+                           "valid names are", commasep(sQuote(nama2))),
+                     call.=FALSE)
     return(NULL)
   }
   out <- .Extra.ClusterModelInfoTable[[name]]

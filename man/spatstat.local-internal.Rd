@@ -46,7 +46,6 @@
 \alias{extraClusterModelInfo}
 \alias{applymaps}
 \alias{accumulateStatusList}
-\alias{printStatusList}
 \alias{HomTestMapEngine}
 \alias{print.homtestmap}
 \description{
@@ -104,10 +103,9 @@
            base.trendcoef, base.cluspar, base.lambda, base.lambdaim,
            clusters, hompoisfit,
            what, do.trend, do.clusters, calcopt, verbose)
- extraClusterModelInfo(name)
+ extraClusterModelInfo(name, warn)
  applymaps(maplist, x)
  accumulateStatusList(x, stats, stoponerror)
- printStatusList(stats)
  HomTestMapEngine(x, info)
  \method{print}{homtestmap}(x, \dots)
 }
