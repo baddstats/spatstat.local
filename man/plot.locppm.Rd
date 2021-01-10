@@ -19,7 +19,7 @@
     \code{"locppm"}).
   }
   \item{\dots}{
-    Arguments passed to \code{\link{plot.ssf}}
+    Arguments passed to \code{\link[spatstat.core]{plot.ssf}}
     to control the plot. 
   }
   \item{what}{
@@ -48,7 +48,7 @@
   which elements of the vector are displayed. It may be any kind of
   index for a numeric vector.
 
-  The plotting is performed by \code{\link{plot.ssf}}.
+  The plotting is performed by \code{\link[spatstat.core]{plot.ssf}}.
 }
 \value{
   \code{NULL}.

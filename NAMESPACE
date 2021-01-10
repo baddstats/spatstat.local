@@ -1,4 +1,6 @@
-import(spatstat,spatstat.utils,tensor,stats,graphics)
+import(stats,graphics)
+import(spatstat.utils,tensor)
+import(spatstat.data,spatstat.sparse,spatstat.geom,spatstat.core)
 
 # Export all names unless they start with a dot
 exportPattern("^[^.]")

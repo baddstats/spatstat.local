@@ -1,0 +1,21 @@
+
+        CHANGES IN spatstat.local VERSION 4.0-0
+
+OVERVIEW
+
+    o spatstat.local now depends on 'spatstat.geom' and 'spatstat.core'
+    rather than 'spatstat'.
+    
+    o added NEWS file.
+
+SIGNIFICANT USER-VISIBLE CHANGES
+
+    o package dependence
+    The 'spatstat' package has been divided into a series of sub-packages.
+    This extension package 'spatstat.local' now depends on the
+    sub-packages 'spatstat.geom', 'spatstat.core', 'spatstat.sparse'
+    and 'spatstat.data'.
+    
+    o NEWS
+    This NEWS file has been added to the package at version 4.0-0.
+

@@ -31,7 +31,7 @@
   The fitted intensity is computed.  
 }
 \value{
-  An object of class \code{"ssf"} as described in \code{\link{ssf}}.
+  An object of class \code{"ssf"} as described in \code{\link[spatstat.core]{ssf}}.
 }
 \author{
   \adrian.

@@ -18,7 +18,7 @@
     Smoothing bandwidth.
   }
   \item{\dots}{
-    Additional arguments passed to \code{\link[spatstat]{Smooth.ppp}}
+    Additional arguments passed to \code{\link[spatstat.core]{Smooth.ppp}}
     controlling the smoothing and the pixel resolution.
   }
 }
@@ -46,7 +46,7 @@
 }
 \seealso{
   \code{\link{locmincon}},
-  \code{\link{Smooth.ppp}}
+  \code{\link[spatstat.core]{Smooth.ppp}}
 }
 \examples{
    fit <- locmincon(redwood)

@@ -48,7 +48,7 @@
   \adrian.
 }
 \seealso{
-  \code{\link{ssf}}
+  \code{\link[spatstat.core]{ssf}}
 }
 \examples{
   example(locmincon)

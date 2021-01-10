@@ -61,7 +61,7 @@
   For \code{fitted.locppm}, a numeric vector.
 
   For \code{predict.locppm}, an object of class \code{"ssf"}
-  as described in \code{\link{ssf}}.
+  as described in \code{\link[spatstat.core]{ssf}}.
 }
 \references{
   \localpaper
