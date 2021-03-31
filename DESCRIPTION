@@ -1,10 +1,10 @@
 Package: spatstat.local
 Type: Package
 Title: Extension to 'spatstat' for Local Composite Likelihood
-Version: 4.0-0
-Date: 2021-01-10
-Depends: R (>= 3.5.0), spatstat.data, spatstat.sparse, spatstat.geom (>= 1.65-0), spatstat.core (>= 1.65-0), stats, graphics
-Imports: tensor, spatstat.utils
+Version: 4.1-0
+Date: 2021-03-31
+Depends: R (>= 3.5.0), spatstat.data (>= 2.0), spatstat.sparse (>= 2.0), spatstat.geom (>= 2.0), spatstat.core (>= 2.0), stats, graphics
+Imports: tensor, spatstat.utils (>= 2.1)
 Authors@R: c(person("Adrian", "Baddeley", 
                     role = c("aut", "cre"),
        	            email = "Adrian.Baddeley@curtin.edu.au"))
@@ -14,5 +14,4 @@ Description: Extension to the 'spatstat' package, enabling the user
 	     by local composite likelihood ('geographically weighted
 	     regression').
 License: GPL (>= 2)
-LazyLoad: yes
 ByteCompile: true
