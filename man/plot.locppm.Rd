@@ -32,7 +32,7 @@
   }
 }
 \details{
-  These are methods for the generic commands \code{\link[graphics]{plot}}
+  These are methods for the generic commands \code{\link[base]{plot}}
   and \code{\link[graphics]{contour}}, for the class \code{"locppm"}.
 
   The argument \code{what} specifies what quantity will be displayed:
@@ -65,7 +65,8 @@
 }
 \seealso{
   \code{\link{locppm}}, 
-  \code{\link{methods.locppm}}
+  \code{\link{methods.locppm}},
+  \code{\link[base]{plot}}, \code{\link[graphics]{plot.default}}
 }
 \examples{
    fit <- locppm(swedishpines, ~1, sigma=9, nd=20,

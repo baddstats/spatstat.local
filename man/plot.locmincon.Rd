@@ -40,7 +40,7 @@
   }
 } 
 \details{
-  This is a method for the generic command \code{\link[graphics]{plot}}
+  This is a method for the generic command \code{\link[base]{plot}}
   for the class \code{"locmincon"}.
 
   The argument \code{which}, if present, specifies
@@ -69,7 +69,8 @@
 }
 \seealso{
   \code{\link{locmincon}}, 
-  \code{\link{methods.locmincon}}
+  \code{\link{methods.locmincon}},
+  \code{\link[base]{plot}}, \code{\link[graphics]{plot.default}}
 }
 \examples{
    X <- redwood[owin(c(0,1), c(-1,-1/2))]

@@ -32,7 +32,7 @@ locmincon(\dots, sigma = NULL, f = 1/4, verbose = TRUE,
     \code{\link[spatstat.core]{localK}},
     \code{\link[spatstat.core]{localKinhom}},
     \code{\link[spatstat.core]{localpcf}} or 
-    \code{\link[spatstat.core]{localpcfinhom}}.
+    \code{\link[spatstat.core:localpcf]{localpcfinhom}}.
   }
   \item{LocalStats}{
     Optional.
