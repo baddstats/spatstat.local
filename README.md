@@ -1,5 +1,7 @@
 # spatstat.local
 
+[![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/spatstat.local)](http://cran.r-project.org/web/packages/spatstat.local)
+
 This is an _extension_ of the `spatstat` package. 
 
 It fits point process models to point pattern data by local composite likelihood (aka geographically weighted regression) as described in the paper, A. Baddeley (2017) Local composite likelihood for spatial point processes, _Spatial Statistics_, **22** (2) 261-295.
@@ -24,7 +26,6 @@ from github is through the `remotes` package:
 
 ```R
 require(remotes)
-install_github('spatstat/spatstat.utils')
 install_github('spatstat/spatstat')
 install_github('baddstats/spatstat.local')
 ```
