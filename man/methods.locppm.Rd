@@ -73,7 +73,7 @@
   \code{\link[spatstat.core]{as.ppm}},
   \code{\link[stats]{coef}},
   \code{\link[stats]{confint}},
-  \code{\link[spatstat.core:is.stationary]{is.poisson}}
+  \code{\link[spatstat.random:is.stationary]{is.poisson}}
   and
   \code{\link{print}}.
 

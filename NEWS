@@ -1,4 +1,16 @@
 
+        CHANGES IN spatstat.local VERSION 4.1-1.001
+
+OVERVIEW
+
+    o spatstat.local now depends on 'spatstat.random'.
+
+SIGNIFICANT USER-VISIBLE CHANGES
+
+    o package dependence
+    This extension package 'spatstat.local' now depends on the
+    new package 'spatstat.random'.
+
         CHANGES IN spatstat.local VERSION 4.1-1
 
 OVERVIEW
