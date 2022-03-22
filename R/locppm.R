@@ -3,7 +3,7 @@
 #
 # Local (pseudo)likelihood for point processes
 #
-#  $Revision: 1.183 $ $Date: 2016/10/11 10:55:06 $
+#  $Revision: 1.185 $ $Date: 2022/03/22 08:02:10 $
 #
 
 locppm <- function(..., sigma=NULL, f = 1/4,
@@ -676,6 +676,7 @@ vcovlocEngine <- function(internals, localwt=NULL,
   with(internals, {
     okX <- ok[Z]
     ncoef <- length(hom.coef)
+    use.coef <- new.coef %orifnull% hom.coef
     # Conditional intensity using the locally-fitted coefficients 'new.coef'
     if(!is.null(new.coef)) 
       lambda <- as.vector(lambda * exp(mom %*% (new.coef - hom.coef)))
@@ -696,17 +697,21 @@ vcovlocEngine <- function(internals, localwt=NULL,
     if(ispois) {
       A2 <- A3 <- B2 <- B3 <- matrix(0, ncoef, ncoef)
     } else {
-      # Require components 'lamdel' and 'momdel'
-      #   lamdel[i,j]   = lambda(X[i] | X[-j]) = lambda(X[i] | X[-c(i,j)])
-      #   momdel[ ,i,j] = h(X[i] | X[-j])      = h(X[i] | X[-c(i,j)])
-      # adjust lamdel for new coefficient
-      if(!is.null(new.coef))
-        lamdel <- lamdel * exp(tensor::tensor(new.coef - hom.coef, momdel, 1, 1))
-      #   pairweight[i,j] = lamdel[i,j]/lambda[i] - 1 
-      pairweight <- lamdel / lambda[Z] - 1
-      #   momdelL[ , i, j] = localwt[i] * momdel[ , i, j]
+      ## adjust variance terms using locally fitted model and local weight
       locwtX <- localwt[Z]
-      momdelL <- momdel * rep(locwtX, rep(ncoef, nX))
+      ##   lamdel[i,j]   = lambda(X[i] | X[-j]) = lambda(X[i] | X[-c(i,j)])
+      ##   momdel[ ,i,j] = h(X[i] | X[-j])      = h(X[i] | X[-c(i,j)])
+      ##   pairweight[i,j] = lamdel[i,j]/lambda[i] - 1
+      sparse <- inherits(ddS, "sparse3Darray")
+      if(sparse) {
+        pairweight <- expm1(tensor1x1(-use.coef, ddS))
+        ## momdelL[ , i, j] = localwt[i] * momdel[ , i, j]
+        momdelL <- momdel * mapSparseEntries(momdel, margin=2, locwtX, conform=TRUE, across=1)
+      } else {
+        pairweight <- expm1(tensor::tensor(-use.coef, ddS, 1, 1))
+        ## momdelL[ , i, j] = localwt[i] * momdel[ , i, j]
+        momdelL <- momdel * rep(locwtX, rep(ncoef, nX))
+      }
       # now compute sum_{i,j} for i != j
       # pairweight[i,j] * outer(momdelL[,i,j], momdelL[,j,i])
       # for data points that contributed to the pseudolikelihood
@@ -715,14 +720,24 @@ vcovlocEngine <- function(internals, localwt=NULL,
       A2 <- sumsymouter(momdelL[, okX, okX], w=pwXok)
       if(bananas)
         B2 <- sumsymouter( momdel[, okX, okX], w=locwtXok * pwXok)
-      # locally-weighted model matrix for data only
+      ## locally-weighted model matrix for data only
       momLX <- momL[Z, , drop=FALSE]
-      # deltamomL[ ,i,j] = momLX[j,] - momdelL[,j,i]
-      deltamomL <- aperm(rep(t(momLX), nX) - momdelL, c(1, 3, 2))
+      ## deltamomL[ ,i,j] = momLX[j,] - momdelL[,j,i]
+      if(sparse) {
+        momLXT <- mapSparseEntries(momdelL, 1, t(momLX), conform=TRUE, across=2)
+      } else {
+        momLXT <- array(t(momLX), dim=dim(momdelL))
+      }
+      deltamomL <- aperm(momLXT - momdelL, c(1, 3, 2))
       A3 <- sumsymouter(deltamomL[, okX, okX])
       if(bananas) {
         momX  <- mom[Z, , drop=FALSE]
-        deltamom <- aperm(rep(t(momX), nX) - momdel, c(1, 3, 2))
+        if(sparse) {
+          momXT <- mapSparseEntries(momdel, 1, t(momX), conform=TRUE, across=2)
+        } else {
+          momXT <- array(t(momX), dim=dim(momdel))
+        }
+        deltamom <- aperm(momXT - momdel, c(1, 3, 2))
         nXok <- sum(okX)
         locwtXokMat <- matrix(locwtXok, nXok, nXok)
         B3 <- sumsymouter(deltamom[, okX, okX], w=locwtXokMat)
