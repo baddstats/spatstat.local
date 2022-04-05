@@ -1,9 +1,9 @@
 Package: spatstat.local
 Type: Package
 Title: Extension to 'spatstat' for Local Composite Likelihood
-Version: 4.1-4.001
-Date: 2022-03-22
-Depends: R (>= 3.5.0), spatstat.data (>= 2.0), spatstat.sparse (>= 2.1-0), spatstat.geom (>= 2.3-2), spatstat.random (>= 2.1-0), spatstat.core (>= 2.4-0.010), spatstat (>= 2.0), stats, graphics
+Version: 4.1-5
+Date: 2022-04-05
+Depends: R (>= 3.5.0), spatstat.data (>= 2.0), spatstat.sparse (>= 2.1-0), spatstat.geom (>= 2.3-2), spatstat.random (>= 2.1-0), spatstat.core (>= 2.4-2), spatstat (>= 2.0), stats, graphics
 Imports: tensor, spatstat.utils (>= 2.1)
 Authors@R: c(person("Adrian", "Baddeley", 
                     role = c("aut", "cre"),
