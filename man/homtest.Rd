@@ -22,7 +22,7 @@
   }
   \item{\dots}{
     Additional arguments passed to \code{\link{locppm}} to determine the
-    locally fitted model, and passed to \code{\link[spatstat.core]{ppm}} to
+    locally fitted model, and passed to \code{\link[spatstat.model]{ppm}} to
     determine the homogeneous model.
   }
   \item{nsim}{

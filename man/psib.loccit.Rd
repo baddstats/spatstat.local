@@ -36,7 +36,7 @@
   This concept was proposed in Baddeley, Rubak and Turner (2015, page 479)
   and Baddeley (2016).
 
-  The function \code{\link[spatstat.core]{psib}} is generic, with methods for
+  The function \code{\link[spatstat.model]{psib}} is generic, with methods for
   \code{"kppm"}, \code{"loccit"} and \code{"locmincon"}.
 
   The functions described here are the methods for
@@ -59,8 +59,8 @@
   \adrian.
 }
 \seealso{
-  \code{\link[spatstat.core]{psib}},
-  \code{\link[spatstat.core]{kppm}},
+  \code{\link[spatstat.model]{psib}},
+  \code{\link[spatstat.model]{kppm}},
   \code{\link{loccit}}
 }
 \examples{

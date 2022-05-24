@@ -59,7 +59,7 @@ loccit(X, trend = ~1,
     Standard deviation of Gaussian kernel for local likelihood.
   }
   \item{f}{
-    Argument passed to \code{\link[spatstat.core]{bw.frac}} to
+    Argument passed to \code{\link[spatstat.explore]{bw.frac}} to
     compute a value for \code{sigma} if it is missing or \code{NULL}.
   }
   \item{clustargs}{
@@ -76,7 +76,7 @@ loccit(X, trend = ~1,
     to the composite likelihood.
   }
   \item{covfunargs,use.gam,nd,eps}{
-    Arguments passed to \code{\link[spatstat.core]{ppm}}
+    Arguments passed to \code{\link[spatstat.model]{ppm}}
     to control the intensity model and intensity fitting.
   }
   \item{niter}{
@@ -92,7 +92,7 @@ loccit(X, trend = ~1,
   data locally, using the local Palm likelihood technique
   (Baddeley, 2016, section 8).
 
-  It can be used in the same way as \code{\link[spatstat.core]{kppm}}
+  It can be used in the same way as \code{\link[spatstat.model]{kppm}}
   and effectively performs local fitting of the same model.
 }
 \value{

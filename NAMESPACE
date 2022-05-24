@@ -1,6 +1,7 @@
 import(stats,graphics,tensor)
 import(spatstat.utils,spatstat.data)
-import(spatstat.sparse,spatstat.geom,spatstat.random,spatstat.core)
+import(spatstat.sparse,spatstat.geom)
+import(spatstat.random,spatstat.explore,spatstat.model)
 import(spatstat)
 
 # Export all names unless they start with a dot
