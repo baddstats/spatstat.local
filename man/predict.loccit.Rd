@@ -42,9 +42,7 @@
 \references{
   \localpaper
 
-  Baddeley, A., Rubak, E. and Turner, R. (2015)
-  \emph{Spatial Point Patterns: Methodology and Applications with R}.
-  Chapman and Hall/CRC Press.
+  \baddrubaturnbook
 }
 \examples{
   X <- redwood[owin(c(0,1), c(-1,-1/2))]

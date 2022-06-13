@@ -87,9 +87,7 @@ locmincon(\dots, sigma = NULL, f = 1/4, verbose = TRUE,
 \references{
   \localpaper
 
-  Baddeley, A., Rubak, E. and Turner, R. (2015)
-  \emph{Spatial Point Patterns: Methodology and Applications with R}.
-  Chapman and Hall/CRC Press.
+  \baddrubaturnbook
 }
 \author{
   \adrian.

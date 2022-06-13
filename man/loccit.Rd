@@ -101,9 +101,7 @@ loccit(X, trend = ~1,
 \references{
   \localpaper
 
-  Baddeley, A., Rubak, E. and Turner, R. (2015)
-  \emph{Spatial Point Patterns: Methodology and Applications with R}.
-  Chapman and Hall/CRC Press.
+  \baddrubaturnbook
 }
 \author{
   \adrian.
