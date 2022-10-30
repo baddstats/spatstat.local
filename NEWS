@@ -1,4 +1,17 @@
 
+        CHANGES IN spatstat.local VERSION 5.0-0
+
+OVERVIEW
+
+    o Adjusted to changes in spatstat family.
+
+SIGNIFICANT USER-VISIBLE CHANGES
+
+    o package dependence
+    This extension package 'spatstat.local' now depends on version 3
+    of the spatstat family.
+
+
         CHANGES IN spatstat.local VERSION 4.1-7
 
 OVERVIEW
