@@ -1,6 +1,6 @@
 # spatstat.local
 
-[![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/spatstat.local)](http://cran.r-project.org/web/packages/spatstat.local)
+[![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/spatstat.local)](http://CRAN.R-project.org/package=spatstat.local)
 [![GitHub R package version](https://img.shields.io/github/r-package/v/baddstats/spatstat.local)](https://github.com/baddstats/spatstat.local)
 
 This is an _extension_ of the `spatstat` package. 
@@ -14,7 +14,7 @@ of `spatstat.local` on CRAN.
 ## Installing the official release
 
 For the most recent **official release** of 
-`spatstat.local`, see the [CRAN page](https://cran.r-project.org/web/packages/spatstat.local). To install it, just type
+`spatstat.local`, see the [CRAN page](https://CRAN.R-project.org/package=spatstat.local). To install it, just type
 
 ```R
 install.packages('spatstat.local')
