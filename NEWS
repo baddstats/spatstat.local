@@ -1,9 +1,11 @@
 
-        CHANGES IN spatstat.local VERSION 5.0-1.001
+        CHANGES IN spatstat.local VERSION 5.0-1.002
 
 OVERVIEW
 
     o Internal updates, required due to changes in spatstat.
+
+    o Minor internal fixes.
 
 
         CHANGES IN spatstat.local VERSION 5.0-1
