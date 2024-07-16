@@ -1,6 +1,6 @@
 # spatstat.local
 
-[![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/spatstat.local)](http://CRAN.R-project.org/package=spatstat.local)
+[![CRAN_Status_Badge](https://www.r-pkg.org/badges/version/spatstat.local)](http://CRAN.R-project.org/package=spatstat.local)
 [![GitHub R package version](https://img.shields.io/github/r-package/v/baddstats/spatstat.local)](https://github.com/baddstats/spatstat.local)
 
 This is an _extension_ of the `spatstat` package. 
